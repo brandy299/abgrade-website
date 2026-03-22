@@ -6,78 +6,81 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
+  - name: "content"
+    label: "Website Content"
+    files:
 
-  - name: "jobs"
-    label: "Job Positions"
-    file: "_data/jobs.json"
-    fields:
-      - label: "Job Positions"
-        name: "items"
-        widget: "list"
+      - name: "jobs"
+        label: "Job Positions"
+        file: "_data/jobs.json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - label: "Tag"
-            name: "tag"
-            widget: "select"
-            options: ["Fellowship", "Postdoc", "PhD", "Position"]
-            default: "Position"
-          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 20, 2026" }
-          - { label: "Link",  name: "link", widget: "string", required: false }
+          - label: "Job Positions"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - label: "Tag"
+                name: "tag"
+                widget: "select"
+                options: ["Fellowship", "Postdoc", "PhD", "Position"]
+                default: "Position"
+              - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 20, 2026" }
+              - { label: "Link",  name: "link", widget: "string", required: false }
 
-  - name: "events"
-    label: "Meetings & Events"
-    file: "_data/events.json"
-    fields:
-      - label: "Meetings & Events"
-        name: "items"
-        widget: "list"
+      - name: "events"
+        label: "Meetings & Events"
+        file: "_data/events.json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - label: "Tag"
-            name: "tag"
-            widget: "select"
-            options: ["Conference", "Workshop", "Meeting", "Online"]
-            default: "Conference"
-          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Feb 18, 2026" }
-          - { label: "Link",  name: "link", widget: "string", required: false }
+          - label: "Meetings & Events"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - label: "Tag"
+                name: "tag"
+                widget: "select"
+                options: ["Conference", "Workshop", "Meeting", "Online"]
+                default: "Conference"
+              - { label: "Datum", name: "date", widget: "string", hint: "z.B. Feb 18, 2026" }
+              - { label: "Link",  name: "link", widget: "string", required: false }
 
-  - name: "seminars"
-    label: "Seminars"
-    file: "_data/seminars.json"
-    fields:
-      - label: "Seminars"
-        name: "items"
-        widget: "list"
+      - name: "seminars"
+        label: "Seminars"
+        file: "_data/seminars.json"
         fields:
-          - { label: "Titel", name: "title", widget: "string" }
-          - label: "Tag"
-            name: "tag"
-            widget: "select"
-            options: ["Seminar", "Webinar", "Online"]
-            default: "Seminar"
-          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 6, 2026" }
-          - { label: "Link",  name: "link", widget: "string", required: false }
+          - label: "Seminars"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - label: "Tag"
+                name: "tag"
+                widget: "select"
+                options: ["Seminar", "Webinar", "Online"]
+                default: "Seminar"
+              - { label: "Datum", name: "date", widget: "string", hint: "z.B. Mar 6, 2026" }
+              - { label: "Link",  name: "link", widget: "string", required: false }
 
-  - name: "calendar"
-    label: "Calendar (Sidebar)"
-    file: "_data/calendar.json"
-    fields:
-      - label: "Calendar Events"
-        name: "items"
-        widget: "list"
+      - name: "calendar"
+        label: "Calendar (Sidebar)"
+        file: "_data/calendar.json"
         fields:
-          - { label: "Name",  name: "name", widget: "string" }
-          - { label: "Datum", name: "date", widget: "string", hint: "z.B. Aug 31, 2026" }
-          - { label: "Link",  name: "link", widget: "string", required: false }
+          - label: "Calendar Events"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name",  name: "name", widget: "string" }
+              - { label: "Datum", name: "date", widget: "string", hint: "z.B. Aug 31, 2026" }
+              - { label: "Link",  name: "link", widget: "string", required: false }
 
-  - name: "stats"
-    label: "Statistics (Homepage)"
-    file: "_data/stats.json"
-    fields:
-      - label: "Statistiken"
-        name: "items"
-        widget: "list"
+      - name: "stats"
+        label: "Statistics (Homepage)"
+        file: "_data/stats.json"
         fields:
-          - { label: "Wert",   name: "value",  widget: "number" }
-          - { label: "Suffix", name: "suffix", widget: "string", required: false, hint: "z.B. + oder leer" }
-          - { label: "Label",  name: "label",  widget: "string" }
+          - label: "Statistiken"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Wert",   name: "value",  widget: "number" }
+              - { label: "Suffix", name: "suffix", widget: "string", required: false, hint: "z.B. + oder leer" }
+              - { label: "Label",  name: "label",  widget: "string" }
